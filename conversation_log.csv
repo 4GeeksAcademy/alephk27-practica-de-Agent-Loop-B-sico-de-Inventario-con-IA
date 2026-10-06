@@ -1,0 +1,37 @@
+timestamp,role,content,tool_name,tool_call_id
+2026-10-06T20:38:49.870169+00:00,user,cuantos libros hay en el inventario?,,
+2026-10-06T20:38:50.171213+00:00,assistant,"{""role"": ""assistant"", ""content"": null, ""tool_calls"": [{""id"": ""z9y2cm83q"", ""type"": ""function"", ""function"": {""name"": ""get_books"", ""arguments"": ""{}""}}]}",,
+2026-10-06T20:38:50.171730+00:00,tool_call,"{""name"": ""get_books"", ""arguments"": ""{}""}",get_books,z9y2cm83q
+2026-10-06T20:38:50.219921+00:00,tool,"[{""titulo"": ""Don Quijote"", ""autor"": ""Miguel de Cervantes"", ""cantidad"": 5, ""id"": 1}, {""titulo"": ""Cien anos de soledad"", ""autor"": ""Gabriel Garcia Marquez"", ""cantidad"": 3, ""id"": 2}]",get_books,z9y2cm83q
+2026-10-06T20:38:50.524763+00:00,assistant,"{""role"": ""assistant"", ""content"": ""Hay **2 libros** en el inventario:\n\n1. **Don Quijote** – Miguel de Cervantes (5 unidades)\n2. **Cien años de soledad** – Gabriel García Márquez (3 unidades)\n\n¿Necesitas hacer alguna consulta o modificación?""}",,
+2026-10-06T20:38:59.433133+00:00,user,quiero agregar un libro,,
+2026-10-06T20:38:59.757646+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Perfecto! Para agregar un libro necesito los siguientes datos:\n\n- **Título** (obligatorio)\n- **Autor** (obligatorio)\n- **Cantidad inicial de stock** (opcional, por defecto 0)\n\n¿Me pasas la información?""}",,
+2026-10-06T20:39:19.653095+00:00,user,"Un Angel en el camino, Maria del Refugio, 5",,
+2026-10-06T20:39:19.978854+00:00,assistant,"{""role"": ""assistant"", ""content"": null, ""tool_calls"": [{""id"": ""pgspj46cs"", ""type"": ""function"", ""function"": {""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""María del Refugio\"",\""cantidad\"":5,\""titulo\"":\""Un Ángel en el camino\""}""}}]}",,
+2026-10-06T20:39:19.979167+00:00,tool_call,"{""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""María del Refugio\"",\""cantidad\"":5,\""titulo\"":\""Un Ángel en el camino\""}""}",add_books,pgspj46cs
+2026-10-06T20:39:20.001386+00:00,tool,"{""titulo"": ""Un Ángel en el camino"", ""autor"": ""María del Refugio"", ""cantidad"": 5, ""id"": 3}",add_books,pgspj46cs
+2026-10-06T20:39:20.310696+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Listo! Se agregó correctamente:\n\n- **Título:** Un Ángel en el camino\n- **Autor:** María del Refugio\n- **Stock:** 5 unidades\n- **ID asignado:** 3\n\n¿Algo más en lo que pueda ayudarte?""}",,
+2026-10-06T20:39:34.366772+00:00,user,quiero agregar 5 titulos,,
+2026-10-06T20:39:34.925945+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Claro! Para agregar los 5 títulos necesito que me pases la información de cada uno:\n\n- **Título** (obligatorio)\n- **Autor** (obligatorio)\n- **Cantidad inicial** (opcional, por defecto 0)\n\nPuedes pasarme los 5 de una vez, por ejemplo:\n\n1. Título / Autor / Cantidad\n2. Título / Autor / Cantidad\n3. Título / Autor / Cantidad\n4. Título / Autor / Cantidad\n5. Título / Autor / Cantidad\n\n¿Me los compartes?""}",,
+2026-10-06T20:40:14.232969+00:00,user,"Ecos del Destino, Jon Led, 100",,
+2026-10-06T20:40:14.590606+00:00,assistant,"{""role"": ""assistant"", ""content"": null, ""tool_calls"": [{""id"": ""x4a5as9mv"", ""type"": ""function"", ""function"": {""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""Jon Led\"",\""cantidad\"":100,\""titulo\"":\""Ecos del Destino\""}""}}]}",,
+2026-10-06T20:40:14.590850+00:00,tool_call,"{""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""Jon Led\"",\""cantidad\"":100,\""titulo\"":\""Ecos del Destino\""}""}",add_books,x4a5as9mv
+2026-10-06T20:40:14.612716+00:00,tool,"{""titulo"": ""Ecos del Destino"", ""autor"": ""Jon Led"", ""cantidad"": 100, ""id"": 4}",add_books,x4a5as9mv
+2026-10-06T20:40:14.945652+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Agregado!\n\n- **Título:** Ecos del Destino\n- **Autor:** Jon Led\n- **Stock:** 100 unidades\n- **ID:** 4\n\nLlevas 1 de 5. ¿Me pasas el siguiente?""}",,
+2026-10-06T20:40:37.738597+00:00,user,"Una Vida con Proposito, Rick Warren, 56",,
+2026-10-06T20:40:37.841737+00:00,error,"Error de Groq (RateLimitError). Comprueba la conexion, la clave y la disponibilidad del modelo qwen/qwen3.8-27b.",,
+2026-10-06T20:40:56.537216+00:00,user,salir,,
+2026-10-06T20:41:12.533406+00:00,user,quiero agregar un libro,,
+2026-10-06T20:41:12.875083+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Claro! Para agregar un libro necesito al menos:\n\n1. **Título** (obligatorio)\n2. **Autor** (obligatorio)\n3. **Cantidad inicial** (opcional, por defecto 0)\n\n¿Qué libro quieres agregar?""}",,
+2026-10-06T20:41:27.520209+00:00,user,"Una Vida con Proposito, Rick Warren, 56",,
+2026-10-06T20:41:27.830643+00:00,assistant,"{""role"": ""assistant"", ""content"": null, ""tool_calls"": [{""id"": ""n1fp4qppj"", ""type"": ""function"", ""function"": {""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""Rick Warren\"",\""cantidad\"":56,\""titulo\"":\""Una Vida con Proposito\""}""}}]}",,
+2026-10-06T20:41:27.830971+00:00,tool_call,"{""name"": ""add_books"", ""arguments"": ""{\""autor\"":\""Rick Warren\"",\""cantidad\"":56,\""titulo\"":\""Una Vida con Proposito\""}""}",add_books,n1fp4qppj
+2026-10-06T20:41:27.856373+00:00,tool,"{""titulo"": ""Una Vida con Proposito"", ""autor"": ""Rick Warren"", ""cantidad"": 56, ""id"": 5}",add_books,n1fp4qppj
+2026-10-06T20:41:28.113947+00:00,assistant,"{""role"": ""assistant"", ""content"": ""¡Listo! Se agregó correctamente el libro:\n\n- **Título:** Una Vida con Proposito\n- **Autor:** Rick Warren\n- **Cantidad:** 56\n- **ID asignado:** 5\n\n¿Necesitas algo más?""}",,
+2026-10-06T20:41:48.224299+00:00,user,Cuantos libros tengo en total?,,
+2026-10-06T20:41:48.435203+00:00,assistant,"{""role"": ""assistant"", ""content"": null, ""tool_calls"": [{""id"": ""x4dehmnq2"", ""type"": ""function"", ""function"": {""name"": ""get_books"", ""arguments"": ""{}""}}]}",,
+2026-10-06T20:41:48.435408+00:00,tool_call,"{""name"": ""get_books"", ""arguments"": ""{}""}",get_books,x4dehmnq2
+2026-10-06T20:41:48.456728+00:00,tool,"[{""titulo"": ""Don Quijote"", ""autor"": ""Miguel de Cervantes"", ""cantidad"": 5, ""id"": 1}, {""titulo"": ""Cien anos de soledad"", ""autor"": ""Gabriel Garcia Marquez"", ""cantidad"": 3, ""id"": 2}, {""titulo"": ""Un Ángel en el camino"", ""autor"": ""María del Refugio"", ""cantidad"": 5, ""id"": 3}, {""titulo"": ""Ecos del Destino"", ""autor"": ""Jon Led"", ""cantidad"": 100, ""id"": 4}, {""titulo"": ""Una Vida con Proposito"", ""autor"": ""Rick Warren"", ""cantidad"": 56, ""id"": 5}]",get_books,x4dehmnq2
+2026-10-06T20:41:48.901356+00:00,assistant,"{""role"": ""assistant"", ""content"": ""Tienes **5 libros** en total en tu inventario:\n\n| ID | Título | Autor | Cantidad |\n|----|--------|-------|----------|\n| 1 | Don Quijote | Miguel de Cervantes | 5 |\n| 2 | Cien años de soledad | Gabriel García Márquez | 3 |\n| 3 | Un Ángel en el camino | María del Refugio | 5 |\n| 4 | Ecos del Destino | Jon Led | 100 |\n| 5 | Una Vida con Propósito | Rick Warren | 56 |\n\n¿Necesitas algo más?""}",,
+2026-10-06T20:42:08.832148+00:00,user,que cantidad de libros tengo?,,
+2026-10-06T20:42:09.242225+00:00,assistant,"{""role"": ""assistant"", ""content"": ""Tienes un total de **169 libros** en stock (sumando todas las cantidades):\n\n- Don Quijote: 5\n- Cien años de soledad: 3\n- Un Ángel en el camino: 5\n- Ecos del Destino: 100\n- Una Vida con Propósito: 56\n\n**Total: 169 ejemplares**\n\n¿Necesitas algo más?""}",,
